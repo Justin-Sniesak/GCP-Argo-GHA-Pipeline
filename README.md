@@ -25,7 +25,7 @@ It demonstrates a full, reproducible pipeline for containerized Go applications 
 
 | Milestone | Description |
 | :--- | :--- |
-| **Enhanced CI/CD Pipeline & Go Course Completion** | Dockerize the Go app, create enhanced GitHub Actions pipelines, and connect builds to GCP Artifact Registry. |
+| **Enhanced CI/CD Pipeline & Go Course Completion** | Dockerize code, create enhanced GitHub Actions pipelines, and connect builds to GCP Artifact Registry. |
 | **GKE Integration** | Deploy 2-node GKE cluster; configure ArgoCD for continuous deployment; validate end-to-end functionality. |
 | **Security Enhancements** | Create Pub/Sub topic, store API keys in Secrets Manager, and configure automatic rotation. |
 | **Documentation & Diagrams** | Build architectural flow: `Dockerized Code → GHA → GCP Artifact Registry → GKE → ArgoCD`. |
