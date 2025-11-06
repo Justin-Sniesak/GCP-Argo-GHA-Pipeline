@@ -39,6 +39,6 @@ It demonstrates a full, reproducible pipeline for containerized Go applications 
 ├── /Pipeline/ # GitHub Actions workflows
 ├── /Terraform/ # IaC manifests for GKE and supporting resources
 ├── /Argo/ # ArgoCD configuration and manifests
-├── /Docs & Screenshots/ # Diagrams, Ops logs, architecture notes
+├── /Docs_Screenshots/ # Diagrams, Ops logs, architecture notes
 └── README.md
 ```
