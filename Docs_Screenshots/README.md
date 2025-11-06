@@ -1,11 +1,15 @@
 ## Troubleshooting Callout
 One distinct code debugging event logged thus far.
 
+The following logs document troubleshooting and validation events related to Go map handling and input validation.
+
 ## Code Debugging
 **Summary:** Code Debugging - what went wrong and what was fixed.
 
 - 2025-11-05 TROUBLESHOOTING: HOF variables were mismatched which was breaking the map, as they were not uniformly defined in a manner each function could call during code execution when provided with user input.
 ![CD1-1](../Docs_Screenshots/CD1-1.jpg)
 
+- 2025-11-05 Code validation to ensure code is prompting user for inputting then properly returning the expected integers.
+![CD1-2](../Docs_Screenshots/CD1-2.jpg)
 
 
