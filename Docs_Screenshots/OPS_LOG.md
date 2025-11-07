@@ -1,5 +1,5 @@
 ## Troubleshooting Callout
-One distinct code debugging event logged thus far.
+Two distinct code debugging events logged thus far.
 
 The following logs document troubleshooting and validation events related to Go map handling and input validation.
 
