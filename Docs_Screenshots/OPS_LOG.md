@@ -12,4 +12,5 @@ The following logs document troubleshooting and validation events related to Go 
 - 2025-11-05 Code validation to ensure code is prompting user for inputting then properly returning the expected integers.
 ![CD1-2](../Docs_Screenshots/CD1-2.jpg)
 
-
+- 2025-11-06 TROUBLESHOOTING: Error handling in code failing due to map of main user input function included too many data types: float64 and string. Corrected by adding HOF later in the code to an if-else statement which returns the desired string which handles erroneous input from the enduser.
+![CD1-3](../Docs_Screenshots/CD1-3.jpg)
