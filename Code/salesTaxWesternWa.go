@@ -52,7 +52,7 @@ func main() {
 	fmt.Printf("Please enter the location you want to calculate sales tax for on a purchase \n 1 - Seattle \n 2 - King \n 3 - Everett \n 4 - Snahomish \n 5- Tacoma \n 6 - Pierce: ")
 	fmt.Scanf("%d\n", &location)
 
-	if location == 1-6 {
+	if location <= 6 {
 		printCost(cost, taxFunction(location))
 	} else {
 		fmt.Println("Not a valid location, please select one of the provided six choices.")
