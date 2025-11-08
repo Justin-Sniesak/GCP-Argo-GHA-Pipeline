@@ -1,1 +1,1 @@
-GitHub Actions and Argo OpsLog and screenshots go here.
+GitHub Actions and Argo goes here.
