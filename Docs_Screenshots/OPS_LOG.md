@@ -16,4 +16,4 @@ The following logs document troubleshooting and validation events related to Go 
 ![CD1-3](../Docs_Screenshots/CD1-3.jpg)
 
 - 2025-11-07 Added additional functionality - Thank you to the user after the app returns the total sales tax for their purchase, added as a defer function.
-![CD1-4](../Docs_Screenshots/CD1-4.jpg)
+![CD1-5](../Docs_Screenshots/CD1-5.jpg)
