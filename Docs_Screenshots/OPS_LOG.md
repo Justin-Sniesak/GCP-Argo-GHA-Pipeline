@@ -17,3 +17,12 @@ The following logs document troubleshooting and validation events related to Go 
 
 - 2025-11-07 Added additional functionality - Thank you to the user after the app returns the total sales tax for their purchase, added as a defer function.
 ![CD1-5](../Docs_Screenshots/CD1-5.jpg)
+
+## Pipeline (Argo & GitHub Actions)
+**Summary:** Push to GCP Artifact registry; pipeline operation, validation, troubleshooting.
+
+- 2025-11-07 Push dockerimage from GitHub to GCP.
+![PL1-1](../Docs_Screenshots/PL1-1.jpg)
+
+- 2025-11-07 Validate dockerimage is in GCP project (Artifact Registry)
+![PL1-2](../Docs_Screenshots/PL1-2.jpg)
