@@ -18,7 +18,7 @@ The following logs document troubleshooting and validation events related to Go 
 - 2025-11-07 Added additional functionality - Thank you to the user after the app returns the total sales tax for their purchase, added as a defer function. 
 ![CD1-5](../Docs_Screenshots/CD1-5.jpg)
 
-- 2025-11-07 Smoke test of code once container is built using the -it flag. (Numbering out of order due to GitHub image caching bug)
+- 2025-11-07 Smoke test of code once container is built using the -it flag. (Numbering out of order due to GitHub image caching bug).  
 ![CD1-4](../Docs_Screenshots/CD1-4.jpg)
 
 ## Result: Smoketest code is functional -> Dockerize code -> Add additional functionality to code rebuild image -> Smoke test code runs once container is built using the -it flag.
