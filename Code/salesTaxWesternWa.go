@@ -54,7 +54,7 @@ func main() {
 
 	fmt.Print("Please enter the cost of your purchase, in dollars and cents: ")
 	fmt.Scanf("%f\n", &cost)
-	fmt.Printf("Please enter the location you want to calculate sales tax for on a purchase \n 1 - Seattle \n 2 - King \n 3 - Everett \n 4 - Snahomish \n 5- Tacoma \n 6 - Pierce: ")
+	fmt.Printf("Please enter the location you want to calculate sales tax for on a purchase \n 1 - Seattle \n 2 - King \n 3 - Everett \n 4 - Snahomish \n 5 - Tacoma \n 6 - Pierce: ")
 	fmt.Scanf("%d\n", &location)
 
 	if location <= 6 {
