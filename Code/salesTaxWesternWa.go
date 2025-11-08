@@ -26,6 +26,9 @@ func calcPierceCountySalesTax(r float64) float64 {
 	return .1025 * r
 }
 
+func thankYou() {
+	fmt.Print("Thank you for your input. Please follow this app for additional features as they are added. \n")
+}
 func printCost(cost float64, calcTax func(r float64) float64) {
 	taxCollected := calcTax(cost)
 	fmt.Print("The tax on your purchase is $", taxCollected, "\n")
@@ -46,6 +49,8 @@ func taxFunction(location int) func(r float64) float64 {
 func main() {
 	var cost float64
 	var location int
+
+	defer thankYou()
 
 	fmt.Print("Please enter the cost of your purchase, in dollars and cents: ")
 	fmt.Scanf("%f\n", &cost)
