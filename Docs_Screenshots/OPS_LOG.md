@@ -29,7 +29,7 @@ The following logs document troubleshooting and validation events related to Go 
 - 2025-11-07 Push dockerimage from GitHub to GCP.
 ![PL1-1](../Docs_Screenshots/PL1-1.jpg)
 
-## Result: Docker image validated pushed from local machine to GCP project, confirming authentication (via API) and succesful push
-
 - 2025-11-07 Validate dockerimage is in GCP project (Artifact Registry)
 ![PL1-2](../Docs_Screenshots/PL1-2.jpg)
+
+## Result: Docker image validated pushed from local machine to GCP project, confirming authentication (via API) and succesful push
