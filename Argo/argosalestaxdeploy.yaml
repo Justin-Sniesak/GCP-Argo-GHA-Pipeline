@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wasalestax
+  labels:
+    app: wasalestax
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wasalestax
+  template:
+    metadata:
+      labels:
+        app: wasalestax
+    spec:
+      containers:
+      - name: wasalestax
+        image: us-west1-docker.pkg.dev/juta-0816/go-code/salestax:11072025
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
