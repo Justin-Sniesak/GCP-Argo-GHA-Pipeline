@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wasalestax
+  name: utctimedate
   labels:
-    app: wasalestax
+    app: utctimedate
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wasalestax
+      app: utctimedate
   template:
     metadata:
       labels:
-        app: wasalestax
+        app: utctimedate
     spec:
       containers:
-      - name: wasalestax
-        image: us-west1-docker.pkg.dev/juta-0816/go-code/salestax:11072025
+      - name: utctimedate
+        image: us-west1-docker.pkg.dev/juta-0816/go-code/gotime
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
