@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: salestax
+spec:
+  template:
+    spec:
+      containers:
+      - name: salestax
+        image: us-west1-docker.pkg.dev/juta-0816/go-code/salestax:11092025
+        imagePullPolicy: Always
+      restartPolicy: Never
+  backoffLimit: 2
+  ttlSecondsAfterFinished: 2700
