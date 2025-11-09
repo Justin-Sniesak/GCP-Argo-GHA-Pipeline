@@ -1,5 +1,5 @@
 # GCP-Argo-GHA-Pipeline
-End-to-end CI/CD lab automating Go builds through Docker, GitHub Actions, and GCP Artifact Registry → GKE with ArgoCD. (WIP - Estimated completion early/mid December 2025)
+End-to-end CI/CD lab automating Go builds through Docker, GitHub Actions, and GCP Artifact Registry → GKE with ArgoCD. (WIP - Estimated completion early/mid December 2025).
 
 # 🧩 Platform Engineering Pipeline Lab  
 **End-to-end CI/CD lab automating Go builds through Docker, GitHub Actions, and GCP Artifact Registry → GKE with ArgoCD. (WIP)**
