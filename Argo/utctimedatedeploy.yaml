@@ -1,17 +1,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: utctimedate-job
-  namespace: go
+  name: utcTimeDate
 spec:
-  backoffLimit: 0
   template:
-    metadata:
-      labels:
-        app: utctimedate
     spec:
-      restartPolicy: Never
       containers:
-      - name: utctimedate
-        image: us-west1-docker.pkg.dev/juta-0816/go-code/utctimedate:latest
-        imagePullPolicy: Always
+      - name: utcTimeDate
+        image: us-west1-docker.pkg.dev/juta-0816/go-code/utctimedate:11082025
+        command: ["go", "run", "utc-time-date.go"]
+        args: ["sleep 900"]
+      restartPolicy: Never
+  backoffLimit: 5
+
