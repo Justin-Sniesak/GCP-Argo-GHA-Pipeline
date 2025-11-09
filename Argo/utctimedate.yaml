@@ -9,7 +9,6 @@ spec:
       - name: utctimedate
         image: us-west1-docker.pkg.dev/juta-0816/go-code/utctimedate:11082025
         imagePullPolicy: Always
-        command: ["/app/utctimedate"]
       restartPolicy: Never
   backoffLimit: 5
   ttlSecondsAfterFinished: 900
