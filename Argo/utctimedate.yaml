@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: utctimedate
-        image: us-west1-docker.pkg.dev/juta-0816/go-code/utctimedate:11082025
+        image: us-west1-docker.pkg.dev/juta-0816/go-code/utctimedate:11082025-2
         imagePullPolicy: Always
       restartPolicy: Never
   backoffLimit: 5
