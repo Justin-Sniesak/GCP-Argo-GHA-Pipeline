@@ -1,22 +1,17 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: batch/v1
+kind: Job
 metadata:
-  name: utctimedate
-  labels:
-    app: utctimedate
+  name: utctimedate-job
+  namespace: go
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: utctimedate
+  backoffLimit: 0
   template:
     metadata:
       labels:
         app: utctimedate
     spec:
+      restartPolicy: Never
       containers:
       - name: utctimedate
-        image: us-west1-docker.pkg.dev/juta-0816/go-code/gotime
+        image: us-west1-docker.pkg.dev/juta-0816/go-code/utctimedate:latest
         imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
