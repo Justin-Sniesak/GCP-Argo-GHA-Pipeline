@@ -1,17 +1,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  annotations:
-    argocd.argoproj.io/tracking-id: utctimedate:batch/Job:go/utctimedate
-  name: utctimedate
+  name: utc-time-date-job
 spec:
   template:
     spec:
       containers:
-      - name: utctimedate
-        image: us-west1-docker.pkg.dev/juta-0816/go-code/utctimedate:11082025
-        command: ["go", "run", "utc-time-date.go"]
-        args: ["sleep 900"]
+      - name: utc-time-date
+        image: us-west1-docker.pkg.dev/juta-0816/go-code/utc-time-date:11092025
+        imagePullPolicy: Always
+        command: ["/app/utc-time-date"]
       restartPolicy: Never
-  backoffLimit: 5
-
+  backoffLimit: 2
+  ttlSecondsAfterFinished: 3600
