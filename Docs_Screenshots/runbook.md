@@ -66,7 +66,7 @@ kubectl -n argo edit configmap argocd-rbac-cm
 Add the following to the bottom of the ConfigMap:
 ```yaml
 policy.csv: |
-  g, justin, role:admin
+  g, <name>, role:admin
 ```
 - `g` is group binding which maps the role to the user
 - `p` is permissions for the role if needing to edit that
