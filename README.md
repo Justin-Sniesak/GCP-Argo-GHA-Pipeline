@@ -1,12 +1,13 @@
 🧩 GCP-Argo-GHA-Pipeline
 
 End-to-end CI/CD lab automating Go builds through Docker, GitHub Actions, and GCP Artifact Registry → GKE with ArgoCD.
-(Completed 11/09/2025 — Total Build Time: 7 hours)
+(Completed 11 / 09 / 2025 — Total Build Time: 7 hours)
 
 🚀 Project Overview
 
 This lab extends the Cloud-Native Infrastructure Lab, focusing on CI/CD design, GitOps automation, and Kubernetes deployment.
-It demonstrates a fully reproducible workflow for containerized Go applications from build → test → publish → deploy → validate, leveraging modern DevOps toolchains.
+It demonstrates a fully reproducible workflow for containerized Go applications from
+build → test → publish → deploy → validate, leveraging modern DevOps toolchains.
 
 Category	Tools & Services
 Languages	Go
@@ -21,7 +22,7 @@ CI/CD Pipeline Implementation	Automated Go builds via Docker and GitHub Actions 
 ArgoCD Integration	Deployed ArgoCD on a GKE Autopilot cluster with private IPs and validated sync and rollout functionality.
 Error Handling & Debugging	Corrected Go map/HOF type mismatches, non-interactive failures, and Argo manifest structure issues.
 Security Hardening	Integrated service accounts with least privilege and validated Argo controller ClusterRoleBindings.
-Documentation & Visualization	Completed full architecture diagram, 50+ screenshots, and comprehensive runbook documentation.
+Documentation & Visualization	Completed full architecture diagram, 50 + screenshots, and comprehensive runbook documentation.
 ⚙️ Technical Highlights
 
 GitOps End-to-End: ArgoCD continuously monitors and syncs GitHub repo manifests to GKE.
@@ -30,13 +31,13 @@ Artifact Registry Integration: CI/CD automatically builds, tags, and pushes Dock
 
 Kubernetes Automation: Validated automated pod health, rollout, and replica management using GKE Autopilot.
 
-Troubleshooting Depth: Included both success and intentionally failed pods to demonstrate environment behavior.
+Troubleshooting Depth: Included both successful and intentionally failed pods to demonstrate environment behavior.
 
 Security Posture: IAM roles scoped per service account with enforced API key rotation and SSH ingress blocking.
 
 🧱 Architecture
 
-Workflow:
+Workflow Steps:
 
 Code Go app locally (Ubuntu laptop)
 
