@@ -1,7 +1,41 @@
-## Troubleshooting Callout
-Two distinct code debugging events logged thus far.
+# CI/CD Pipeline with ArgoCD and GKE
 
-The following logs document troubleshooting and validation events related to Go map handling and input validation.
+End-to-end GitOps pipeline demonstrating:
+- Go application development with error handling
+- Docker containerization
+- GitHub Actions CI/CD
+- GCP Artifact Registry integration
+- ArgoCD automated deployments to GKE
+- Troubleshooting and validation workflows
+
+**Build Time:** 7 hours (including troubleshooting and validation)
+
+## Architecture & Runbook
+
+![argo_pipeline_diagram.jpg](../Docs_Screenshots/argo_pipeline_diagram.jpg)
+![runbook.md](../Docs_Screenshots/runbook.md)
+
+1. Code app on Ubuntu laptop
+2. Build Docker image, tag
+3. Push code to GitHub main branch
+4. Push Docker image to GCP Artifact Registry
+5. CI/CD pipeline pulls images from Artifact Registry
+6. ArgoCD pushes Docker images to GKE cluster via service account
+7. SSH into cloudshell, validate pods, health, and logs via kubectl
+8. Monitor and troubleshoot until desired outcome
+
+## Documented troubleshooting events:
+
+- Go map handling and Higher-Order Function (HOF) variable mismatches
+- Error handling with mixed data types (float64 and string)
+- ArgoCD manifest folder structure breaking pipelines"
+
+## CI/CD Pipeline Components
+- **Source Control:** GitHub
+- **CI/CD Tool:** GitHub Actions
+- **Container Registry:** GCP Artifact Registry
+- **GitOps:** ArgoCD
+- **Orchestration:** Google Kubernetes Engine (GKE)
 
 ## ArgoCD
 **Summary:** Argo installation, functionality and validation.
@@ -24,7 +58,8 @@ The following logs document troubleshooting and validation events related to Go 
 ## Code Debugging
 **Summary:** Code Debugging and validation - what went wrong and what was fixed.
 
-- ## 2025-11-05 TROUBLESHOOTING: HOF variables were mismatched which was breaking the map, as they were not uniformly defined in a manner each function could call during code execution when provided with user input.
+- ## 2025-11-05 Issue: Higher-Order Function (HOF) variables were not uniformly defined, preventing the map from properly calling functions during user input execution.
+  ## Fix: Standardized function signatures to match map expectations.
 ![CD1-1](../Docs_Screenshots/CD1-1.jpg)
 
 - 2025-11-05 Code validation to ensure code is prompting user for inputting then properly returning the expected integers.
@@ -38,8 +73,6 @@ The following logs document troubleshooting and validation events related to Go 
 
 - 2025-11-07 Smoke test of code once container is built using the -it flag. (Numbering out of order due to GitHub image caching bug).  
 ![CD1-4](../Docs_Screenshots/CD1-4.jpg)
-
-## Result: Smoketest code is functional -> Dockerize code -> Add additional functionality to code rebuild image -> Smoke test code runs once container is built using the -it flag.
 
 ## CI/CD Pipeline Validation
 **Summary:** Push to GCP Artifact registry; pipeline operation, validation, troubleshooting.
@@ -65,13 +98,25 @@ The following logs document troubleshooting and validation events related to Go 
 - 2025-11-09 Succesful pipeline validation of UTC Go jobpipeline.
 ![PL1-7](../Docs_Screenshots/PL1-7.jpg)
 
-- 2025-11-09 This pipeline is intentionally in a failing state, as the code requires user input, in a container would require exec -it, which will not function as intended in a Kubernetes pipeline, as the control plane will prevent the pod from creating. It is provided as a side by side comparion to the UTC pod which ran from end-to-end with an RC=0 (Good run).
+- ## 2025-11-09 ### Intentional Failure: Interactive Code in Non-Interactive Environment
+
+This pipeline demonstrates the limitations of code requiring user input (`fmt.Scanf`) in Kubernetes environments:
+- Code requires `exec -it` for interactive input
+- Kubernetes control plane prevents pod creation for non-automated workloads
+- Provided as comparison to UTC job which completed successfully (RC=0)
 ![PL1-8](../Docs_Screenshots/PL1-8.jpg)
 
-## Result: Docker image validated pushed from local machine to GCP project, confirming authentication (via API) and succesful push
-
 ## GKE
-**Summary:** Cluster creation, administation and pipeline smoketesting/validation.
+**Summary:** Cluster creation, administration, and pipeline validation.
 
-- 2025-11-07 Create GKE autopilot cluster and validate up and running.
+**2025-11-09: Create GKE autopilot cluster**
+- Configuration: Autopilot mode, private IP, regular release channel
+- Validated cluster is up and running
+- Connected via `gcloud container clusters get-credentials`
+
+**Cluster validated for:**
+- ArgoCD deployment
+- Application workload scheduling
+- Service account authentication
+- kubectl access for validation
 ![GKE1-1](../Docs_Screenshots/GKE1-1.jpg)
