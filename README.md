@@ -12,7 +12,7 @@ This lab extends the Cloud-Native Infrastructure Lab, focusing on CI/CD design, 
 It demonstrates a fully reproducible workflow for containerized Go applications —
 build → test → publish → deploy → validate — leveraging modern DevOps toolchains.
 
-Category	Tools & Services
+Tools & Services
 - Languages	Go
 - Containers	Docker
 - CI/CD	GitHub Actions · ArgoCD
