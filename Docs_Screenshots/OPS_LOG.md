@@ -97,7 +97,7 @@ End-to-end GitOps pipeline demonstrating:
 - 2025-11-09 Succesful pipeline validation of UTC Go jobpipeline.
 ![PL1-7](../Docs_Screenshots/PL1-7.jpg)
 
-## 2025-11-09 ### Intentional Failure: Interactive Code in Non-Interactive Environment
+## 2025-11-09 Intentional Failure: Interactive Code in Non-Interactive Environment
 
 This pipeline demonstrates the limitations of code requiring user input (`fmt.Scanf`) in Kubernetes environments:
 - Code requires `exec -it` for interactive input
