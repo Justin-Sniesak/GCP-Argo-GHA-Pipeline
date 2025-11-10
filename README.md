@@ -16,8 +16,7 @@ Category	Tools & Services
 - Languages	Go
 - Containers	Docker
 - CI/CD	GitHub Actions · ArgoCD
-- Cloud	GCP (Artifact Registry · GKE · Pub/Sub · Secrets Manager)
-- IaC	Terraform
+- Cloud	GCP (Artifact Registry · GKE · Secrets Manager)
 - Security	IAM · Secret Manager 
 
 ---
