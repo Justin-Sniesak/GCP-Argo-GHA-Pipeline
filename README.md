@@ -18,7 +18,7 @@ Category	Tools & Services
 - CI/CD	GitHub Actions · ArgoCD
 - Cloud	GCP (Artifact Registry · GKE · Pub/Sub · Secrets Manager)
 - IaC	Terraform
-- Security	IAM · Secret Manager · API Key Rotation
+- Security	IAM · Secret Manager 
 
 ---
 
