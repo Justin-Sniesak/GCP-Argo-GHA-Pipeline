@@ -1,0 +1,4 @@
+name: GCP-ArgoCD-GitHub Actions-CI/CD Pipeline
+remote_theme: pages-themes/modernist@v0.2.0
+plugins:
+- jekyll-remote-theme 
