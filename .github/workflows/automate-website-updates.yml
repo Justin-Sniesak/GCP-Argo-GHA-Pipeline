@@ -1,0 +1,35 @@
+#This workflow automatically updates my GCP-ArgoCD-GitHub Actions CI/CD page everytime I update my README.md with additional work completed I want to showcase
+#This is the name of the workflow - used under the Actions tab
+name: Deploy GCP-Argo-GHA-Pipeline README.md updates to GitHub pages website
+#This is workflow name - will appear in the list of workflow runs
+run-name: GCP-ArgoCD-GHA-CI/CD Pipeline
+#Trigger for the workflow - in otherwords, what causes the workflow to kick off
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+#Groups all jobs associated with this workflow together      
+jobs:
+  build:
+    #Specifies the type of VM to create and what OS it runs
+    runs-on: ubuntu-latest
+    #Steps involved with the jobs the workflow runs
+    steps:
+      #Step1 - Checks out the repo and clones to the VM
+      - name: Checkout Repository 
+      #Most recent version of actions/checkout  - checksout repo to the runner
+        uses: actions/checkout@v5
+
+      #Step2 - Updates content of main page using the peaceiris tool
+      - name: Deploy from README.md
+        uses: peaceiris/actions-gh-pages@v3
+      #Configuration variables needed for the job to run
+        with: 
+          #Temp authentication token needed for the job to run
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #Source destination - root
+          publish_dir: '.'
+          #Target destination - root
+          destination_dir: ''
