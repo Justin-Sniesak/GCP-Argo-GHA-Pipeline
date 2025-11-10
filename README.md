@@ -37,7 +37,7 @@ Security Posture: IAM roles scoped per service account with enforced API key rot
 
 🧱 Architecture
 
-Workflow Steps:
+Workflow Steps
 
 Code Go app locally (Ubuntu laptop)
 
