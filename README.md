@@ -72,4 +72,5 @@ Workflow Steps
 ## 📘 Documentation
 
 Full runbook and troubleshooting steps:
-➡️ Docs_Screenshots/runbook.md
+
+➡️ [Docs_Screenshots/runbook.md](https://github.com/Justin-Sniesak/GCP-Argo-GHA-Pipeline/blob/main/Docs_Screenshots/runbook.md )
