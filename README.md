@@ -13,11 +13,11 @@ It demonstrates a fully reproducible workflow for containerized Go applications 
 build → test → publish → deploy → validate — leveraging modern DevOps toolchains.
 
 Tools & Services
-- Languages	Go
-- Containers	Docker
-- CI/CD	GitHub Actions · ArgoCD
-- Cloud	GCP (Artifact Registry · GKE · Secrets Manager)
-- Security	IAM · Secret Manager 
+- **Languages**	Go
+- **Containers** Docker
+- **CI/CD**	GitHub Actions · ArgoCD
+- **GCP** Artifact Registry · GKE · Secrets Manager
+- **Security**	IAM · Secret Manager · Service Accounts
 
 ---
 
