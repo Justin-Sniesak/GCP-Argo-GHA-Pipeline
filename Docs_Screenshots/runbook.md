@@ -53,7 +53,7 @@ When generating a new token, add the user to the master ConfigMap at the top:
 ```yaml
 apiVersion: v1
 data:
-  accounts.justin: apiKey,login  # Name of account - need BOTH values
+  accounts.<name>: apiKey,login  # Name of account - need BOTH values
   admin.enabled: "true"           # Admin account - disable after new account is set
 ```
 
