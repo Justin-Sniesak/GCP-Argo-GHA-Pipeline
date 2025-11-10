@@ -94,7 +94,7 @@ End-to-end GitOps pipeline demonstrating:
 - 2025-11-09 Validate UTC Go job pod completed and returned an RC=0. Also validated expected output is returned in the pod log.
 ![PL1-6](../Docs_Screenshots/PL1-6.jpg)
 
-- 2025-11-09 Succesful pipeline validation of UTC Go jobpipeline.
+- 2025-11-09 Successful pipeline validation of UTC Go job pipeline.
 ![PL1-7](../Docs_Screenshots/PL1-7.jpg)
 
 ## 2025-11-09 Intentional Failure: Interactive Code in Non-Interactive Environment
