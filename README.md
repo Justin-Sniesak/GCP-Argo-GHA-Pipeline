@@ -27,7 +27,7 @@ Tools & Services
 - ArgoCD Integration	Deployed ArgoCD on a GKE Autopilot cluster with private IPs and validated sync and rollout functionality.
 - Error Handling & Debugging	Corrected Go map/HOF type mismatches, non-interactive failures, and Argo manifest structure issues.
 - Security Hardening	Integrated service accounts with least privilege and validated Argo controller ClusterRoleBindings.
-- Documentation & Visualization	Completed full architecture diagram, 50 + screenshots, and comprehensive runbook documentation.
+- Documentation & Visualization	Completed full architecture diagram, screenshots/artifacts for all milestones, and comprehensive runbook documentation.
 
 ---
 
