@@ -33,7 +33,7 @@ gcloud container clusters get-credentials <clustername> --region <regionname>
 ### 5. Access ArgoCD UI
 Do NOT enable port forwarding despite documentation instructions as that will prevent connectivity.
 
-Access ArgoCD at: `https://<IP_ADDR>:8080`
+Access ArgoCD at: `https://<IP_ADDR>`
 
 ArgoCD uses port 8080.
 
