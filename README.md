@@ -23,7 +23,6 @@ Tools & Services
 
 ## 🧩 Core Objectives (Completed)
 
-Milestone	Description
 - CI/CD Pipeline Implementation	Automated Go builds via Docker and GitHub Actions → published images to GCP Artifact Registry.
 - ArgoCD Integration	Deployed ArgoCD on a GKE Autopilot cluster with private IPs and validated sync and rollout functionality.
 - Error Handling & Debugging	Corrected Go map/HOF type mismatches, non-interactive failures, and Argo manifest structure issues.
@@ -42,9 +41,7 @@ Milestone	Description
 
 ---
 
-## 🧱 Architecture
-
-Workflow Steps
+## 🧱 Workflow Steps
 
 1. Code Go app locally (Ubuntu laptop)
 2. Build and tag Docker image
@@ -58,11 +55,10 @@ Workflow Steps
 ---
 ```
 ## 🧰 Repository Structure
-├── Code/                # Go code and Dockerfiles
-├── Pipeline/            # GitHub Actions workflows
 ├── Argo/                # ArgoCD configuration and manifests
-├── Terraform/           # IaC manifests for GKE and supporting resources
+├── Code/                # Go code and Dockerfiles
 ├── Docs_Screenshots/    # Architecture diagrams, logs, validation screenshots
+├── Pipeline/            # GitHub Actions workflows
 └── README.md
 ```
 
