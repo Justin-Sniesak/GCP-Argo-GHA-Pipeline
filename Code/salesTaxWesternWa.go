@@ -21,13 +21,13 @@ func calcSeattleSalesTax(r float64) float64 {
 func calcKingCountySalesTax(r float64) float64 {
 	k := .1010
 	var ki = &k
-	log.Println("Mem address of King County is:", *ki)
+	log.Println("Mem address of King County is:", ki)
 	return k * r
 }
 
 func calcEverettSalesTax(r float64) float64 {
 	e := .0990
-	ev := &e
+	var ev = &e
 	log.Println("Mem address of Everett is:", ev)
 	return e * r
 }
@@ -48,22 +48,22 @@ func calcTacomaSalesTax(r float64) float64 {
 
 func calcPierceCountySalesTax(r float64) float64 {
 	p := .1025
-	pi := &p
+	var pi = &p
 	log.Println("Mem address of Pierce county is:", pi)
 	return p * r
 }
 
-func calcOlympiaSalesTax(r float64) float64 {
-	o := .0985
-	var ol *float64 = &o
-	log.Println("Mem address of Olympia is:", ol)
-	return o * r
+func calcPortOrchardSalesTax(r float64) float64 {
+	po := .0920
+	var ppo = &po
+	log.Println("Mem address of Port Orchard is:", ppo)
+	return po * r
 }
 
 func calcKitsapCountySalesTax(r float64) float64 {
 	k := .0925
 	var kit = &k
-	log.Println("Mem address of Kitsap county is:", kit)
+	log.Println("Mem address of the Kitsap county ptr is:", kit)
 	return k * r
 }
 
@@ -83,28 +83,34 @@ func taxFunction(location int) func(r float64) float64 {
 		4: calcSnahomishCountySalesTax,
 		5: calcTacomaSalesTax,
 		6: calcPierceCountySalesTax,
-		7: calcOlympiaSalesTax,
+		7: calcPortOrchardSalesTax,
 		8: calcKitsapCountySalesTax,
 	}
 	return locationTax[location]
 }
 
+func modify(m string) {
+	m = "Please enter the cost of your purchase, in dollars and cents: "
+}
+
 func main() {
 	var cost float64
 	var location int
+	var p string = "Please enter the cost of your purchase, in dollars and cents, dollar sign not needed: "
 
 	logging()
+	modify(p)
 	defer thankYou()
 
-	fmt.Print("Please enter the cost of your purchase, in dollars and cents: ")
+	fmt.Print(p)
 	fmt.Scanf("%f\n", &cost)
-	fmt.Printf("Please enter the location you want to calculate sales tax for on a purchase \n 1 - Seattle \n 2 - King \n 3 - Everett \n 4 - Snahomish \n 5 - Tacoma \n 6 - Pierce \n 7 - Olympia \n 8 - Kitsap: ")
+	fmt.Printf("Please enter the location you want to calculate sales tax for on a purchase \n 1 - Seattle \n 2 - King County \n 3 - Everett \n 4 - Snahomish County \n 5 - Tacoma \n 6 - Pierce County \n 7 - Port Orchard \n 8 - Kitsap County: ")
 	fmt.Scanf("%d\n", &location)
 
 	if location <= 8 {
 		printCost(cost, taxFunction(location))
 	} else {
-		fmt.Println("Not a valid location, please select one of the provided six choices.")
+		fmt.Println("Not a valid location, please select one of the provided eight choices.")
 	}
 
 }
