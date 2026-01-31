@@ -59,7 +59,7 @@ Tools & Services
 ├── Code/                # Go code and Dockerfiles
 ├── Docs_Screenshots/    # Architecture diagrams, logs, validation screenshots
 ├── Pipeline/            # GitHub Actions workflows
-├── LISCENCE.md
+├── LICENSE.md
 └── README.md
 ```
 
